@@ -1,6 +1,7 @@
 const pinoHttp = require("pino-http");
 const logger = require("../utils/logger");
 
+/** @type {import("pino-http").HttpLogger} */
 const requestLogger = pinoHttp({
   logger,
   serializers: {
