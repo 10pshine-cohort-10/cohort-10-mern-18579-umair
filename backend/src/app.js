@@ -1,8 +1,9 @@
 const express = require("express");
+const requestLogger = require("./middlewares/requestLogger");
 
 const app = express();
 
-// parse json body
+app.use(requestLogger);
 app.use(express.json());
 
 /**
